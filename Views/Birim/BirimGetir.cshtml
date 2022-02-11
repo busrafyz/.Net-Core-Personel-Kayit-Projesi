@@ -1,0 +1,18 @@
+﻿@model CorePersonel.Models.Birim
+@{
+    ViewData["Title"] = "BirimGetir";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+@using (Html.BeginForm("BirimGuncelle", "Birim", FormMethod.Post))
+{
+    <form method="post">
+        <div class="form-group">
+            <label class="alert">Birim Id:</label>
+            @Html.TextBoxFor(x => x.BirimId)
+            <label class="alert">Birim Adı:</label>
+            @Html.TextBoxFor(x => x.BirimAd)
+        </div>
+        <button type="submit" class="btn btn-primary">Güncelle</button>
+    </form>
+}

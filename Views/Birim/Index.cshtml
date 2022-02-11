@@ -1,0 +1,33 @@
+﻿@using CorePersonel.Models
+@model List<Birim>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<table class="table">
+    <thead class="thead-light">
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Birim</th>
+            <th scope="col">Sil</th>
+            <th scope="col">Güncelle</th>
+            <th scope="col">Detaylar</th>
+            <th><a href="BirimEkle" class="btn btn-info">Yeni Birim Ekle</a></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var x in Model)
+        {
+            <tr>
+
+                <td>@x.BirimId</td>
+                <td>@x.BirimAd</td>
+                <td><a href="BirimSil/@x.BirimId" class="btn btn-danger">Sil</a></td>
+                <td><a href="BirimGetir/@x.BirimId" class="btn btn-success">Güncelle</a></td>
+                <td><a href="BirimDetay/@x.BirimId" class="btn btn-dark">Detaylar</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+

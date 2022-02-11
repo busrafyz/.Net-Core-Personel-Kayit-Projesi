@@ -1,0 +1,37 @@
+﻿@using CorePersonel.Models
+@model List<Personel>
+@{
+    ViewData["Title"] = "BirimDetay";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+<br />
+<h2>@ViewBag.brmad Departmanı Personelleri</h2>
+<br />
+<table class="table">
+    <thead class="thead-light">
+        <tr>
+
+            <th scope="col">Id</th>
+            <th scope="col">Adı</th>
+            <th scope="col">Soyadı</th>
+         
+           
+            
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var x in Model)
+        {
+        <tr>
+            <td>@x.PersonelId</td>
+            <td>@x.Name</td>
+            <td>@x.Surname</td>
+      
+
+            
+
+        </tr>
+        }
+    </tbody>
+</table>
+

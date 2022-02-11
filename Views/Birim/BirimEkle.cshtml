@@ -1,0 +1,16 @@
+﻿@model CorePersonel.Models.Birim
+@{
+    ViewData["Title"] = "BirimEkle";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<h1>Birim Ekle</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label class="alert">Birim Adı:</label>
+        @Html.TextBoxFor(x => x.BirimAd)
+    </div>
+    <button type="submit" class="btn btn-primary">Ekle</button>
+</form>
+

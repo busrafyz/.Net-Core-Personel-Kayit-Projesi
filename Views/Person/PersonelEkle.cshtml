@@ -1,0 +1,23 @@
+﻿@model CorePersonel.Models.Personel
+@{
+    ViewData["Title"] = "PersonelEkle";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<h1>Personel Ekle</h1>
+
+<form method="post">
+    
+        <label>Adı:</label>
+        @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+    <br />
+        <label>Soyadı:</label>
+        @Html.TextBoxFor(x => x.Surname, new { @class = "form-control" })
+    <br />
+        <label>Birim:</label>
+        @Html.DropDownListFor(x=> x.Birim.BirimId, (List<SelectListItem>)ViewBag.vl, new { @class = "form-control" })
+   <br />
+    
+    <button type="submit" class="btn btn-primary">Ekle</button>
+</form>
+
